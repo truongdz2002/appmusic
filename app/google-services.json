@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "967678065669",
+    "project_id": "appmusiconline-df658",
+    "storage_bucket": "appmusiconline-df658.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967678065669:android:b2f90eb1a7956b863cb06c",
+        "android_client_info": {
+          "package_name": "com.example.appmusiconline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967678065669-sh963vqfdt1sccpqdifg179oi2ekv10g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXETYM5twDsd94jXyi9rHC3Sfml_5hkmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967678065669-sh963vqfdt1sccpqdifg179oi2ekv10g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

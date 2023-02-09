@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <androidx.cardview.widget.CardView
+       android:id="@+id/cv_img"
+       android:layout_width="60dp"
+       android:layout_height="60dp"
+       app:cardCornerRadius="10dp">
+       <ImageView
+           android:id="@+id/img_music"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:src="@drawable/photo"
+           android:scaleType="centerCrop"/>
+   </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tv_name_music"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name_music"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/cv_img" />
+    <TextView
+        android:id="@+id/tv_name_artist"
+        android:layout_width="match_parent"
+        android:text="Name_artist"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@id/cv_img"
+        android:layout_below="@id/tv_name_music"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppMusicOnline</string>
+    <string name="individual">Cá nhân </string>
+    <string name="discover">Khám phá </string>
+    <string name="zingchart">zingchart</string>
+    <string name="Radio">Radio</string>
+    <string name="Fllowing">Theo dõi</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

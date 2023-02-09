@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="80dp"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/custem_item_library">
+    <ImageView
+        android:id="@+id/img_icon_libary"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon_love"/>
+    <TextView
+        android:id="@+id/tv_item_library"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bài hát hát"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

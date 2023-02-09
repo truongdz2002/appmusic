@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/tool_bar_bottomsheet_playmusic">
+
+            <ImageButton
+                android:id="@+id/btn_finish_bottom_sheet_play_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/no_background"
+                android:contentDescription="@string/Fllowing"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phát từ"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nguồn nhạc"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical">
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:ci_drawable="@drawable/custom_indicator"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_load_fragment_playmusic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_time_start"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentStart="true"
+            android:text="00:00" />
+
+        <TextView
+            android:id="@+id/tv_time_end"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:text="00:00" />
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/btn_prious"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/skip_previous_24"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/btn_pause"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/skip_next_24"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_pause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/btn_prious"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/pause_24"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_play"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/btn_prious"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/play_arrow_24"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

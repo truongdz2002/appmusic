@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Widget.Theme.AppMusicOnline.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+</resources>

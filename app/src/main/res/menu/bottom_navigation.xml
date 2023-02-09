@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/btn_individual"
+    android:title="@string/individual"
+    android:icon="@drawable/ic_baseline_individual"/>
+<item
+    android:id="@+id/btn_discover"
+    android:title="@string/discover"
+    android:icon="@drawable/ic_baseline_discover_24" />
+<item
+    android:id="@+id/btn_radio"
+    android:title="@string/Radio"
+    android:icon="@drawable/ic_baseline_radio_24"/>
+<item
+    android:id="@+id/btn_fllowing"
+    android:title="@string/Fllowing"
+    android:icon="@drawable/ic_baseline_flowwing"/>
+</menu>
