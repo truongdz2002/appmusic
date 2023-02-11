@@ -21,6 +21,7 @@ class adapter_library(private var listLibrary:ArrayList<Library>,var context: Co
     {
        itemClick=m_itemClick
     }
+    //
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): adapter_library_viewholder {
