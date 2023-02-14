@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.appmusiconline.databinding.ActivitySplashScreenBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -19,20 +20,28 @@ import com.google.firebase.auth.GoogleAuthProvider
 
 private lateinit var auth:FirebaseAuth
 private lateinit var googleSignInClient: GoogleSignInClient
+private lateinit var binding: ActivitySplashScreenBinding
 class Splash_screen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
+        binding=ActivitySplashScreenBinding.inflate(layoutInflater)
+        Init()
+        setControlClick()
+        val view = binding.root
+        setContentView(view)
+    }
+    private fun setControlClick() {
+        binding.btnLoginGoogle.setOnClickListener {
+            SignupInGoogle()
+        }
+    }
+    private fun Init() {
         auth= FirebaseAuth.getInstance()
         val gson=GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
         googleSignInClient=GoogleSignIn.getClient(this,gson)
-        findViewById<Button>(R.id.btn_login_google).setOnClickListener {
-            SignupInGoogle()
-        }
-
     }
 
     private fun SignupInGoogle() {
@@ -48,13 +57,11 @@ class Splash_screen : AppCompatActivity() {
             handleResult(task)
         }
     }
-
     private fun handleResult(task: Task<GoogleSignInAccount>) {
          if (task.isSuccessful)
          {
             val account:GoogleSignInAccount=task.result
              if(account!=null)
-
              {
                  updateUI(account)
              }
@@ -65,13 +72,15 @@ class Splash_screen : AppCompatActivity() {
 
          }
     }
-
     private fun updateUI(account: GoogleSignInAccount) {
        val credential=GoogleAuthProvider.getCredential(account.idToken,null)
       auth.signInWithCredential(credential).addOnCompleteListener {
           if (it.isSuccessful) {
               val intent: Intent = Intent(this, MainActivity::class.java)
+              intent.putExtra("Uid",account.id)
+              intent.putExtra("NameAccount",account.displayName)
               startActivity(intent)
+              finishAffinity()
           } else {
               Toast.makeText(this, "failed", Toast.LENGTH_LONG).show()
           }

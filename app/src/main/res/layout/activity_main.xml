@@ -18,6 +18,7 @@
                         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
                             <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/img_avatar_mini"
                                 android:layout_width="37dp"
                                 android:layout_height="34dp"
                                 android:src="@drawable/download" />

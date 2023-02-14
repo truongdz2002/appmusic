@@ -55,7 +55,7 @@ class Fragment_Songs_On_Device : Fragment() {
         adapterMusic.SetClickItem(object :adapter_music.ItemClick
         {
             override fun ClickItemSong(music: Music,position: Int) {
-                mainActivity.showBotomSheet()
+                mainActivity.showBotomSheetPlayMusic()
                 mainActivity.music=music
                 mainActivity.positionsong=position
                 mainActivity.mediaPlayer.reset()

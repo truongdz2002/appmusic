@@ -48,7 +48,7 @@ class Bottom_sheet_dialog_playmusic :BottomSheetDialogFragment()
         SetSequence(mainActivity.positionsong)
         SetOnClick()
         val behavior=BottomSheetBehavior.from(viewdialog.parent as View)
-        behavior.setState(BottomSheetBehavior.STATE_EXPANDED)
+        behavior.state=BottomSheetBehavior.STATE_EXPANDED
 
         return bottom_sheet_dialog_playmusic
     }
@@ -78,7 +78,7 @@ class Bottom_sheet_dialog_playmusic :BottomSheetDialogFragment()
     private fun SetOnClick() {
        btn_finish_bottom_sheet_play_music.setOnClickListener(
            {
-               mainActivity.DissmissBottomSheet()
+               mainActivity.DissmissBottomSheetPlayMusic()
            }
        )
         btn_pause.setOnClickListener(
